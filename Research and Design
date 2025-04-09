@@ -1,1 +1,21 @@
 LOLCODE Interpreter Project
+How the Interpreter Processes LOLCODE:
+Lexical Analysis (Lexer): The Lexer scans the source code line by line, breaking it into tokens—atomic units like keywords (HAI, BTW, etc.), identifiers, literals, and operators.
+
+Parsing (Parser): The Parser checks the tokens for grammatical correctness based on LOLCODE syntax rules and builds an abstract syntax tree (AST) to represent the code’s structure.
+
+Evaluation (Evaluator): The Evaluator processes the AST to execute LOLCODE commands, handling variables, expressions, and control flow.
+
+Core Components:
+Lexer: Converts raw input into tokens and detects lexical errors.
+
+Parser: Ensures code conforms to LOLCODE’s grammar and generates an AST.
+
+Evaluator: Executes the program, manages variable storage, evaluates expressions, and processes logic/conditionals.
+
+Handling Variables, Expressions, and Conditionals:
+Variables: Stored in a symbol table with unique identifiers; support for dynamic typing.
+
+Expressions: Includes arithmetic and logical operations; evaluated using a recursive approach over the AST.
+
+Conditionals: Managed with constructs like O RLY?, parsing branches for true (YA RLY) and false (NO WAI) cases.
