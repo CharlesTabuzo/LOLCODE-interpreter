@@ -38,11 +38,12 @@ token_patterns = [
     ("HAI", r"HAI"),
     ("KTHXBYE", r"KTHXBYE"),
     ("ITZ", r"ITZ"),
-    ("R", r"R"),
     ("VISIBLE", r"VISIBLE"),
     ("GIMMEH", r"GIMMEH"),
     ("DIFFRINT", r"DIFFRINT"),
-    ("NOT", r"NOT")
+    ("NOT", r"NOT"),
+    ("AN", r"AN"),
+    ("R", r"\bR\b")
 ]
 
 class Lexer:
@@ -293,6 +294,9 @@ class Parser:
             op = token.type
             self.eat(token.type)
             left = self.parse_expression()
+            # Expect and consume AN between operands
+            if self.current_token() and self.current_token().type == "AN":
+                self.eat("AN")
             right = self.parse_expression()
             return BinaryOpNode(op, left, right)
         elif token.type == "NOT":
