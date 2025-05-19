@@ -126,3 +126,9 @@ The web interface provides a user-friendly way to:
 
 Your default web browser will automatically open to `http://localhost:8501` where you can interact with the LOLCODE interpreter.
 
+# Locode-interpreter is Already Deployed 
+You can run this directly to your browser using your broweser
+by copy and pasting this URL
+```bash
+https://lolcode-interpreter.streamlit.app/
+```
