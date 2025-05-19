@@ -102,3 +102,27 @@ In your project folder, open the terminal.
 Run the following command to execute a LOLCODE file:
 ```bash
 python lolcode_interpreter.py hello.lol
+```
+
+### b. Using the Web Interface
+1. **Install Streamlit:**
+```bash
+pip install streamlit
+```
+
+2. **Launch the Web Interface:**
+```bash
+streamlit run lolcode_web.py
+```
+
+The web interface provides a user-friendly way to:
+- Upload `.lol` files or write LOLCODE directly in the browser
+- View step-by-step execution process:
+  - Lexical analysis with token visualization
+  - Parsing results
+  - Program execution and output
+- Examine variable environment and program state
+- Access helpful LOLCODE examples and documentation
+
+Your default web browser will automatically open to `http://localhost:8501` where you can interact with the LOLCODE interpreter.
+
